@@ -54,5 +54,20 @@
     "stylelint-config-standard": "^18.3.0",
     "stylelint-scss": "^3.9.2",
     "vue-jest": "^3.0.4"
-  }
+  },
+  "husky": {
+    "hooks": {
+       "pre-commit": "lint-staged"
+     }
+   },
+   "lint-staged": {
+     "*.{js,vue}": [
+       "eslint --fix",
+       "git add"
+     ],
+     "*.vue": [
+       "stylelint --fix",
+       "git add"
+     ]
+   }
 }
