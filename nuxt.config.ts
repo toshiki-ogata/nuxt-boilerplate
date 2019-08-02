@@ -1,4 +1,6 @@
-export default {
+import NuxtConfiguration from '@nuxt/config'
+
+const config: NuxtConfiguration = {
   mode: 'spa',
   head: {
     title: process.env.npm_package_name || '',
@@ -22,3 +24,5 @@ export default {
   modules: ['@nuxtjs/eslint-module', '@nuxtjs/style-resources'],
   build: {}
 }
+
+export default config
